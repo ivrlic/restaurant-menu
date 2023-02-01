@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Restaurant Order App</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <h1>Jimmy's diner</h1>
+            <p class="subtitle" id="subtitle">The best burgers and pizzas in town</p>
+        </header>
+
+        <main>
+            <div class="order-list" id="order-list"></div>
+            <div class="the-order" id="the-order">
+
+                <p class="the-order-title">Your order</p>
+                <div class="the-order-list" id="the-order-list"></div>
+                <div class="the-order-total-price">
+                    <p class="the-order-total-price-name">Total price:</p>
+                    <p class="the-order-total-price-amount">$114</p>
+                </div>
+                <div class="the-order-btn-div">
+                    <button class="the-order-btn" id="the-order-btn">Complete order</button>
+                </div>
+
+            </div>
+            <div class="end-order" id="end-order"></div>
+        </main>
+
+        <div class="modal" id="modal">
+            <div class="close-modal-btn-container">
+                <button class="modal-close-btn" id="modal-close-btn">X</button>
+            </div>
+            <div class="modal-inner" id="modal-inner">
+                <h2 class="modal-title">Enter card details</h2>
+                <form id="consent-form">
+                    <input type="text" name="name" placeholder="Enter your name" id="input-name" required/>
+                    <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" name="cardNumber" placeholder="Enter card number" required/>
+                    <input type="tel" inputmode="numeric" pattern="[0-9\s]{3,4}" name="cvv" maxlength="4" placeholder="Enter CVV" required/>
+                    <button type="submit" class="modal-btn" id="modal-btn">Pay</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
